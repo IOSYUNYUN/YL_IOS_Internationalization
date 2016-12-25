@@ -1,26 +1,22 @@
 //
-//  YLRootViewController.m
+//  YLLanguageSettingViewController.m
 //  YL_IOS_Internationalization
 //
 //  Created by YouLing on 2016/12/25.
 //  Copyright © 2016年 YouLing. All rights reserved.
 //
 
-#import "YLRootViewController.h"
-#import "Masonry.h"
+#import "YLLanguageSettingViewController.h"
 
-
-
-@interface YLRootViewController ()
+@interface YLLanguageSettingViewController ()
 
 @end
 
-@implementation YLRootViewController
+@implementation YLLanguageSettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
 }
 
 - (void)didReceiveMemoryWarning {
