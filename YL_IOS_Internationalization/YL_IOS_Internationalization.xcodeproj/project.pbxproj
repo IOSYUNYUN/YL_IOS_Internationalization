@@ -13,6 +13,7 @@
 		178283A01E0FF1BD00809B06 /* YLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1782839F1E0FF1BD00809B06 /* YLAppDelegate.m */; };
 		178283AA1E0FF58B00809B06 /* YLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178283A91E0FF58B00809B06 /* YLBaseViewController.m */; };
 		178283AE1E0FF62100809B06 /* YLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178283AD1E0FF62100809B06 /* YLRootViewController.m */; };
+		178283B21E0FF88400809B06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 178283B41E0FF88400809B06 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,9 @@
 		178283A91E0FF58B00809B06 /* YLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBaseViewController.m; sourceTree = "<group>"; };
 		178283AC1E0FF62100809B06 /* YLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLRootViewController.h; sourceTree = "<group>"; };
 		178283AD1E0FF62100809B06 /* YLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLRootViewController.m; sourceTree = "<group>"; };
+		178283B11E0FF87700809B06 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		178283B31E0FF88400809B06 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		178283B51E0FF88700809B06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		178283A11E0FF27100809B06 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				178283B41E0FF88400809B06 /* InfoPlist.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				178283951E0FF16500809B06 /* LaunchScreen.storyboard in Resources */,
+				178283B21E0FF88400809B06 /* InfoPlist.strings in Resources */,
 				178283921E0FF16500809B06 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,8 +212,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				178283941E0FF16500809B06 /* Base */,
+				178283B11E0FF87700809B06 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		178283B41E0FF88400809B06 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				178283B31E0FF88400809B06 /* zh-Hans */,
+				178283B51E0FF88700809B06 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -217,6 +233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -265,6 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

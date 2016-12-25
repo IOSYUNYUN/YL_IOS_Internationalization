@@ -20,7 +20,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     YLRootViewController* rootViewControler = [[YLRootViewController alloc] init];
     /*
-     *设置rootViewController 
+     *设置rootViewController
      */
     self.window.rootViewController = rootViewControler;
     [self.window makeKeyAndVisible];
