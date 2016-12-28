@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="English.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ovi-9y-v5L">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ovi-9y-v5L" firstAttribute="leading" secondItem="cdw-TY-t9W" secondAttribute="leading" id="1Pt-Iu-CfM"/>
-                            <constraint firstItem="Ovi-9y-v5L" firstAttribute="top" secondItem="uL3-8p-CXL" secondAttribute="bottom" id="8hw-4R-yaG"/>
+                            <constraint firstItem="Ovi-9y-v5L" firstAttribute="top" secondItem="uL3-8p-CXL" secondAttribute="bottom" constant="-20" id="8hw-4R-yaG"/>
                             <constraint firstAttribute="trailing" secondItem="Ovi-9y-v5L" secondAttribute="trailing" id="W9r-gz-Doz"/>
                             <constraint firstItem="xXc-3d-bFx" firstAttribute="top" secondItem="Ovi-9y-v5L" secondAttribute="bottom" id="fgg-He-wz9"/>
                         </constraints>

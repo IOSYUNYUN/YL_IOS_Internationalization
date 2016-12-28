@@ -25,7 +25,6 @@
 		1782842C1E0FFD3900809B06 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1782841B1E0FFD3900809B06 /* View+MASAdditions.m */; };
 		1782842D1E0FFD3900809B06 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1782841E1E0FFD3900809B06 /* ViewController+MASAdditions.m */; };
 		1782842E1E0FFD3900809B06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 178284201E0FFD3900809B06 /* InfoPlist.strings */; };
-		178284311E0FFDCA00809B06 /* YLLanguageSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178284301E0FFDCA00809B06 /* YLLanguageSettingViewController.m */; };
 		178284351E0FFE7200809B06 /* YLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 178284341E0FFE7200809B06 /* YLUtility.m */; };
 		17978AF51E13957B0010B87E /* LaunchScreen-Chinese.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17978AF41E13957B0010B87E /* LaunchScreen-Chinese.storyboard */; };
 		17978AF71E1395AD0010B87E /* LaunchScreen-English.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17978AF61E1395AD0010B87E /* LaunchScreen-English.storyboard */; };
@@ -72,8 +71,6 @@
 		1782841E1E0FFD3900809B06 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		178284211E0FFD3900809B06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		178284221E0FFD3900809B06 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		1782842F1E0FFDCA00809B06 /* YLLanguageSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLanguageSettingViewController.h; sourceTree = "<group>"; };
-		178284301E0FFDCA00809B06 /* YLLanguageSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLanguageSettingViewController.m; sourceTree = "<group>"; };
 		178284331E0FFE7200809B06 /* YLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLUtility.h; sourceTree = "<group>"; };
 		178284341E0FFE7200809B06 /* YLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLUtility.m; sourceTree = "<group>"; };
 		17978AF41E13957B0010B87E /* LaunchScreen-Chinese.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "LaunchScreen-Chinese.storyboard"; sourceTree = "<group>"; };
@@ -164,8 +161,6 @@
 			children = (
 				178283AC1E0FF62100809B06 /* YLRootViewController.h */,
 				178283AD1E0FF62100809B06 /* YLRootViewController.m */,
-				1782842F1E0FFDCA00809B06 /* YLLanguageSettingViewController.h */,
-				178284301E0FFDCA00809B06 /* YLLanguageSettingViewController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -321,7 +316,6 @@
 				178283AE1E0FF62100809B06 /* YLRootViewController.m in Sources */,
 				178284251E0FFD3900809B06 /* MASConstraint.m in Sources */,
 				1782842D1E0FFD3900809B06 /* ViewController+MASAdditions.m in Sources */,
-				178284311E0FFDCA00809B06 /* YLLanguageSettingViewController.m in Sources */,
 				178284271E0FFD3900809B06 /* MASLayoutConstraint.m in Sources */,
 				1782842A1E0FFD3900809B06 /* NSArray+MASAdditions.m in Sources */,
 				178284291E0FFD3900809B06 /* MASViewConstraint.m in Sources */,
