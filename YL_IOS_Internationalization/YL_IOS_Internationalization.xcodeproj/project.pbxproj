@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176C053B1E139980005BA8AF /* English.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 176C053A1E139980005BA8AF /* English.jpg */; };
 		178283871E0FF16500809B06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 178283861E0FF16500809B06 /* main.m */; };
 		178283921E0FF16500809B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 178283911E0FF16500809B06 /* Assets.xcassets */; };
-		178283951E0FF16500809B06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178283931E0FF16500809B06 /* LaunchScreen.storyboard */; };
 		178283A01E0FF1BD00809B06 /* YLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1782839F1E0FF1BD00809B06 /* YLAppDelegate.m */; };
 		178283AA1E0FF58B00809B06 /* YLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178283A91E0FF58B00809B06 /* YLBaseViewController.m */; };
 		178283AE1E0FF62100809B06 /* YLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178283AD1E0FF62100809B06 /* YLRootViewController.m */; };
@@ -27,13 +27,16 @@
 		1782842E1E0FFD3900809B06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 178284201E0FFD3900809B06 /* InfoPlist.strings */; };
 		178284311E0FFDCA00809B06 /* YLLanguageSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178284301E0FFDCA00809B06 /* YLLanguageSettingViewController.m */; };
 		178284351E0FFE7200809B06 /* YLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 178284341E0FFE7200809B06 /* YLUtility.m */; };
+		17978AF51E13957B0010B87E /* LaunchScreen-Chinese.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17978AF41E13957B0010B87E /* LaunchScreen-Chinese.storyboard */; };
+		17978AF71E1395AD0010B87E /* LaunchScreen-English.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17978AF61E1395AD0010B87E /* LaunchScreen-English.storyboard */; };
+		17978AFA1E1398B10010B87E /* Chinese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17978AF91E1398B10010B87E /* Chinese.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		176C053A1E139980005BA8AF /* English.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = English.jpg; sourceTree = "<group>"; };
 		178283821E0FF16500809B06 /* YL_IOS_Internationalization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YL_IOS_Internationalization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		178283861E0FF16500809B06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		178283911E0FF16500809B06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		178283941E0FF16500809B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		178283961E0FF16500809B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1782839E1E0FF1BD00809B06 /* YLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLAppDelegate.h; sourceTree = "<group>"; };
 		1782839F1E0FF1BD00809B06 /* YLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLAppDelegate.m; sourceTree = "<group>"; };
@@ -41,7 +44,6 @@
 		178283A91E0FF58B00809B06 /* YLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBaseViewController.m; sourceTree = "<group>"; };
 		178283AC1E0FF62100809B06 /* YLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLRootViewController.h; sourceTree = "<group>"; };
 		178283AD1E0FF62100809B06 /* YLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLRootViewController.m; sourceTree = "<group>"; };
-		178283B11E0FF87700809B06 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		178284051E0FFD3800809B06 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		178284061E0FFD3800809B06 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		178284071E0FFD3800809B06 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
@@ -74,6 +76,9 @@
 		178284301E0FFDCA00809B06 /* YLLanguageSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLanguageSettingViewController.m; sourceTree = "<group>"; };
 		178284331E0FFE7200809B06 /* YLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLUtility.h; sourceTree = "<group>"; };
 		178284341E0FFE7200809B06 /* YLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLUtility.m; sourceTree = "<group>"; };
+		17978AF41E13957B0010B87E /* LaunchScreen-Chinese.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "LaunchScreen-Chinese.storyboard"; sourceTree = "<group>"; };
+		17978AF61E1395AD0010B87E /* LaunchScreen-English.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "LaunchScreen-English.storyboard"; sourceTree = "<group>"; };
+		17978AF91E1398B10010B87E /* Chinese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Chinese.jpg; path = ../Chinese.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +114,6 @@
 				1782839D1E0FF1BD00809B06 /* appDelegate */,
 				178283A21E0FF51800809B06 /* YLDemo */,
 				178283911E0FF16500809B06 /* Assets.xcassets */,
-				178283931E0FF16500809B06 /* LaunchScreen.storyboard */,
 				178283961E0FF16500809B06 /* Info.plist */,
 				178283851E0FF16500809B06 /* Supporting Files */,
 			);
@@ -136,6 +140,7 @@
 		178283A21E0FF51800809B06 /* YLDemo */ = {
 			isa = PBXGroup;
 			children = (
+				17978AF81E1398A80010B87E /* Images */,
 				178284321E0FFE4D00809B06 /* Utility */,
 				1782841F1E0FFD3900809B06 /* Resource */,
 				178283AB1E0FF5DA00809B06 /* Example */,
@@ -210,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				178284201E0FFD3900809B06 /* InfoPlist.strings */,
+				17978AF41E13957B0010B87E /* LaunchScreen-Chinese.storyboard */,
+				17978AF61E1395AD0010B87E /* LaunchScreen-English.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -221,6 +228,15 @@
 				178284341E0FFE7200809B06 /* YLUtility.m */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		17978AF81E1398A80010B87E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				176C053A1E139980005BA8AF /* English.jpg */,
+				17978AF91E1398B10010B87E /* Chinese.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,10 +299,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				178283951E0FF16500809B06 /* LaunchScreen.storyboard in Resources */,
 				1782842E1E0FFD3900809B06 /* InfoPlist.strings in Resources */,
+				17978AF71E1395AD0010B87E /* LaunchScreen-English.storyboard in Resources */,
 				178283921E0FF16500809B06 /* Assets.xcassets in Resources */,
+				176C053B1E139980005BA8AF /* English.jpg in Resources */,
+				17978AF51E13957B0010B87E /* LaunchScreen-Chinese.storyboard in Resources */,
 				178284231E0FFD3900809B06 /* Info.plist in Resources */,
+				17978AFA1E1398B10010B87E /* Chinese.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,15 +338,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		178283931E0FF16500809B06 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				178283941E0FF16500809B06 /* Base */,
-				178283B11E0FF87700809B06 /* zh-Hans */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		178284201E0FFD3900809B06 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -475,6 +485,7 @@
 				1782839B1E0FF16500809B06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

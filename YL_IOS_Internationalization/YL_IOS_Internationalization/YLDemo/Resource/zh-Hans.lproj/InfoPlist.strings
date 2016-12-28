@@ -5,4 +5,11 @@
   Created by YouLing on 2016/12/25.
   Copyright © 2016年 YouLing. All rights reserved.
 */
+/*
+ *app的名称
+ */
 "CFBundleDisplayName" = "幽灵";
+/*
+ *启动的storyboard
+ */
+"UILaunchStoryboardName" = "LaunchScreen-Chinese";
