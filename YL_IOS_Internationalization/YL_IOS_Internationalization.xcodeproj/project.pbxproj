@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17475E8A1E1600F400A33820 /* Chinese.png in Resources */ = {isa = PBXBuildFile; fileRef = 17475E891E1600F400A33820 /* Chinese.png */; };
+		17475E8C1E16010F00A33820 /* English.png in Resources */ = {isa = PBXBuildFile; fileRef = 17475E8B1E16010F00A33820 /* English.png */; };
+		17475E8F1E163AA900A33820 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17475E911E163AA900A33820 /* Localizable.strings */; };
 		176C053B1E139980005BA8AF /* English.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 176C053A1E139980005BA8AF /* English.jpg */; };
 		178283871E0FF16500809B06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 178283861E0FF16500809B06 /* main.m */; };
 		178283921E0FF16500809B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 178283911E0FF16500809B06 /* Assets.xcassets */; };
@@ -32,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17475E891E1600F400A33820 /* Chinese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chinese.png; path = ../Chinese.png; sourceTree = "<group>"; };
+		17475E8B1E16010F00A33820 /* English.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = English.png; sourceTree = "<group>"; };
+		17475E901E163AA900A33820 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		17475E921E163AAB00A33820 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		17475E931E163AAC00A33820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		17475E941E163CFA00A33820 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		17475E951E163CFA00A33820 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		176C053A1E139980005BA8AF /* English.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = English.jpg; sourceTree = "<group>"; };
 		178283821E0FF16500809B06 /* YL_IOS_Internationalization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YL_IOS_Internationalization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		178283861E0FF16500809B06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -209,9 +219,12 @@
 		1782841F1E0FFD3900809B06 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				17475E8B1E16010F00A33820 /* English.png */,
+				17475E891E1600F400A33820 /* Chinese.png */,
 				178284201E0FFD3900809B06 /* InfoPlist.strings */,
 				17978AF41E13957B0010B87E /* LaunchScreen-Chinese.storyboard */,
 				17978AF61E1395AD0010B87E /* LaunchScreen-English.storyboard */,
+				17475E911E163AA900A33820 /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -278,6 +291,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 178283791E0FF16500809B06;
 			productRefGroup = 178283831E0FF16500809B06 /* Products */;
@@ -297,8 +311,11 @@
 				1782842E1E0FFD3900809B06 /* InfoPlist.strings in Resources */,
 				17978AF71E1395AD0010B87E /* LaunchScreen-English.storyboard in Resources */,
 				178283921E0FF16500809B06 /* Assets.xcassets in Resources */,
+				17475E8C1E16010F00A33820 /* English.png in Resources */,
 				176C053B1E139980005BA8AF /* English.jpg in Resources */,
+				17475E8F1E163AA900A33820 /* Localizable.strings in Resources */,
 				17978AF51E13957B0010B87E /* LaunchScreen-Chinese.storyboard in Resources */,
+				17475E8A1E1600F400A33820 /* Chinese.png in Resources */,
 				178284231E0FFD3900809B06 /* Info.plist in Resources */,
 				17978AFA1E1398B10010B87E /* Chinese.jpg in Resources */,
 			);
@@ -332,11 +349,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		17475E911E163AA900A33820 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17475E901E163AA900A33820 /* zh-Hans */,
+				17475E921E163AAB00A33820 /* en */,
+				17475E931E163AAC00A33820 /* Base */,
+				17475E951E163CFA00A33820 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		178284201E0FFD3900809B06 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				178284211E0FFD3900809B06 /* en */,
 				178284221E0FFD3900809B06 /* zh-Hans */,
+				17475E941E163CFA00A33820 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -445,6 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.youling.YL-IOS-Internationalization";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,6 +487,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.youling.YL-IOS-Internationalization";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

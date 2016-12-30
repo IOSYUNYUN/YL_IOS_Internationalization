@@ -1,0 +1,18 @@
+/* LRootViewController-text_password */
+"123456" = "123456";
+
+/* YLRootViewController-headImage */
+"English.png" = "Chinese.png";
+
+/* YLRootViewController——label_title */
+"Language-English" = "语言-中文";
+
+/* YLRootViewController-text_name */
+"YouLing" = "幽灵";
+
+/* YLRootViewController——label_name */
+"userName:" = "用户姓名：";
+
+/* YLRootViewController——label_password */
+"userPasw:" = "用户密码：";
+
