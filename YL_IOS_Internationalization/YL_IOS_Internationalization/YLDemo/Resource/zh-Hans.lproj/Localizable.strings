@@ -16,3 +16,6 @@
 /* YLRootViewController——label_password */
 "userPasw:" = "用户密码：";
 
+/* LRootViewController-label_swithch */
+"WhetherCustomLanguage" = "是否支持自定义语言";
+

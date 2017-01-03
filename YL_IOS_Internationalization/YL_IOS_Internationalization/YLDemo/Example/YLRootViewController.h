@@ -10,4 +10,9 @@
 
 @interface YLRootViewController : YLBaseViewController
 
+/*
+ *用于记录当前的语言
+ */
+@property(nonatomic,strong) NSString* currentLanguage;
+
 @end

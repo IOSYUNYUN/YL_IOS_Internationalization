@@ -7,6 +7,7 @@
 //
 
 #import "YLRootViewController.h"
+#import "YLUtility.h"
 #import "Masonry.h"
 
 
@@ -36,6 +37,18 @@
  *用户头像
  */
 @property(nonatomic,strong) UIImageView* headImage;
+/*
+ *用来实现语言切换的
+ */
+@property(nonatomic,strong) UISegmentedControl* segmentedControl;
+/*
+ *是否支持自定义的语言切换，如果不支持的那么就是系统语言
+ */
+@property(nonatomic,strong) UISwitch * swithch;
+/*
+ *swithch需要显示的文本
+ */
+@property(nonatomic,strong) UILabel* label_swithch;
 
 @end
 
@@ -48,7 +61,7 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self setControlValue];
     [self initControlUI];
-    
+    [self setSegmentedControlState];
 }
 
 #pragma mark -- 懒加载
@@ -130,6 +143,44 @@
     }
     return _headImage;
 }
+-(UISegmentedControl*) segmentedControl
+{
+    if(_segmentedControl == nil)
+    {
+        UISegmentedControl* segmeted = [[UISegmentedControl alloc] initWithItems:@[@"English",@"简体中文",@"繁體中文"]];
+        [segmeted addTarget:self action:@selector(segmentedControlChangValue:) forControlEvents:UIControlEventValueChanged];
+                _segmentedControl = segmeted;
+        
+    }
+    return _segmentedControl;
+}
+-(UISwitch*) swithch
+{
+    if(_swithch == nil)
+    {
+        UISwitch* s = [[UISwitch alloc] init];
+        //[]
+        [s addTarget:self action:@selector(swithchChangeValue:) forControlEvents:UIControlEventValueChanged];
+        NSString* whether = [YLUtility getWhetherCustomLanguage];
+        if([whether isEqualToString:@"YES"])
+        {
+            [s setOn:YES];
+        }
+        _swithch = s;
+    }
+    return _swithch;
+}
+-(UILabel*) label_swithch
+{
+    if (_label_swithch == nil) {
+        UILabel* label = [[UILabel alloc] init];
+       // [label setBackgroundColor:[UIColor whiteColor]];
+        label.layer.cornerRadius = 5;
+        label.clipsToBounds = YES;
+        _label_swithch = label;
+    }
+    return _label_swithch;
+}
 #pragma mark -- UI初始化
 -(void) initControlUI
 {
@@ -190,9 +241,118 @@
         make.size.mas_equalTo(CGSizeMake(150, 30));
         
     }];
+    /*
+     *
+     */
+    [self.view addSubview:self.swithch];
+    [self.swithch mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(weakSelf.label_password.mas_bottom).offset(20);
+        make.centerX.mas_equalTo(weakSelf.view.mas_centerX).offset(104);
+    }];
+    /*
+     *
+     */
+    [self.view addSubview:self.label_swithch];
+    [self.label_swithch mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(weakSelf.swithch.mas_top);
+        make.centerX.mas_equalTo(weakSelf.view.mas_centerX).offset(-22.5);
+        make.size.mas_equalTo(CGSizeMake(215, 30));
+    }];
+    /*
+     *切换语言
+     */
+    [self.view addSubview:self.segmentedControl];
+    [self.segmentedControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(weakSelf.swithch.mas_bottom).offset(20);
+        make.centerX.mas_equalTo(self.view.mas_centerX);
+    }];
     
     
 }
+#pragma mark-- 封装方法
+/*
+ *设置segmentedControl的状态
+ */
+-(void) setSegmentedControlState
+{
+    //[segmeted ]
+    if([[YLUtility getWhetherCustomLanguage] isEqualToString:@"NO"])
+    {
+        [self.segmentedControl setEnabled:NO];
+        NSString* syscurrentLanguage = [YLUtility getSysCurrentLanguage];
+        if([syscurrentLanguage hasPrefix:@"en"])
+        {
+            [self.segmentedControl setSelectedSegmentIndex:0];
+        }
+        else if ([syscurrentLanguage hasPrefix:@"zh-Hans"]) {
+            [self.segmentedControl setSelectedSegmentIndex:1];
+        }
+        else if([syscurrentLanguage hasPrefix:@"zh-Hant"])
+        {
+            [self.segmentedControl setSelectedSegmentIndex:2];
+        }
+        //  else if([syscurrentLanguage i])
+    }
+    else if([[YLUtility getWhetherCustomLanguage] isEqualToString:@"YES"])
+    {
+        [self.segmentedControl setEnabled:YES];
+        NSString* customCurrentLanguage = [YLUtility getSysCurrentLanguage];
+        if([customCurrentLanguage hasPrefix:@"en"])
+        {
+            [self.segmentedControl setSelectedSegmentIndex:0];
+        }
+        else if ([customCurrentLanguage hasPrefix:@"zh-Hans"]) {
+            [self.segmentedControl setSelectedSegmentIndex:1];
+        }
+        else if([customCurrentLanguage hasPrefix:@"zh-Hant"])
+        {
+            [self.segmentedControl setSelectedSegmentIndex:2];
+        }
+
+    }
+
+}
+#pragma mark -- 各个控件的事件
+/*
+ *sUISwitch 事件
+ */
+-(void) swithchChangeValue:(UISwitch*) sender
+{
+    if(sender.isOn == YES)
+    {
+        [YLUtility setWhetherCustomLanguage:@"YES"];
+    }
+    else
+    {
+        [YLUtility setWhetherCustomLanguage:@"NO"];
+    }
+     [self setSegmentedControlState];
+    //if(sender)
+
+}
+/*
+ *语言切换
+ */
+-(void) segmentedControlChangValue:(UISegmentedControl*) sender
+{
+    NSInteger senderId = sender.selectedSegmentIndex;
+    
+    switch (senderId) {
+        case 0:
+            NSLog(@"英文");
+            break;
+        case 1:
+            NSLog(@"简体中文");
+            break;
+        case 2:
+            NSLog(@"繁体中文");
+            break;
+        default:
+            break;
+    }
+    
+}
+
 #pragma mark -- 设置控件数据
 
 -(void) setControlValue
@@ -201,17 +361,17 @@
     self.label_name.text = NSLocalizedString(@"userName:", @"YLRootViewController——label_name");
     self.label_password.text = NSLocalizedString(@"userPasw:", @"YLRootViewController——label_password");
     self.headImage.image = [UIImage imageNamed:NSLocalizedString(@"English.png", @"YLRootViewController-headImage")];
-    self.headImage.backgroundColor  = [UIColor redColor];
     self.text_name.text = NSLocalizedString(@"YouLing", @"YLRootViewController-text_name");
     self.text_password.text = NSLocalizedString(@"123456", @"LRootViewController-text_password");
+    self.label_swithch.text = NSLocalizedString(@"WhetherCustomLanguage", @"LRootViewController-label_swithch");
 }
 -(void) viewDidLayoutSubviews
 {
     /*
      *在这里能够打印控件的frame
      */
-    NSLog(@"text_name%f",self.view.frame.size.width-self.text_name.frame.origin.x-150);
-    NSLog(@"label_name%f",self.label_name.frame.origin.x);
+    //NSLog(@"text_name%f",self.view.frame.size.width-self.text_name.frame.origin.x-150);
+    //NSLog(@"label_name%f",self.label_name.frame.origin.x);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
