@@ -16,7 +16,14 @@
  *记录是否允许自定义语言的key
  */
 #define WHETHER_CUSTOM_LANGUAGE @"WhetherCustomLanguage"
-
+/*
+ *本地的budle的本地话
+ */
+#define  NSLocalizedStringYL(key,table,comment) NSLocalizedStringFromTableInBundle(key, table, [YLUtility getLanguageBundle], comment)
+/*
+ *当修改语言时发送的通知
+ */
+#define YL_CHANGE_LANGUAGE @"YLCHANGELANGUAGE"
 
 #import <Foundation/Foundation.h>
 
@@ -44,4 +51,12 @@
  *设置当前自定义的语言
  */
 +(void) setCuntomCurrentLanguage:(NSString*) customCurrntLanguage;
+/*
+ *获取NSBundle
+ */
++(NSBundle*) getLanguageBundle;
+/*
+ *改变NSBundel
+ */
++(NSBundle*) changeLanguageBundle:(NSString*) languageType;
 @end

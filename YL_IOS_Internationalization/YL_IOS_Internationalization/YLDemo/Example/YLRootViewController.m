@@ -59,9 +59,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor lightGrayColor];
-    [self setControlValue];
+    /*
+     *NSLocalizedString(key, comment)
+     */
+    //[self setControlValue];
+    /*
+     *NSLocalizedStringFromTable(key, tbl, comment)
+     */
+    //[self setControlValuetb1];
     [self initControlUI];
     [self setSegmentedControlState];
+    [self setControlValueWithCustomLanguage];
+    /*
+     *对语言切换时进行监听通知
+     */
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeLanguage:) name:YL_CHANGE_LANGUAGE object:nil];
 }
 
 #pragma mark -- 懒加载
@@ -292,11 +304,20 @@
             [self.segmentedControl setSelectedSegmentIndex:2];
         }
         //  else if([syscurrentLanguage i])
+        [YLUtility changeLanguageBundle:syscurrentLanguage];
+        /*
+         *存储当前的语言
+         */
+        [YLUtility setCuntomCurrentLanguage:syscurrentLanguage];
+        /*
+         *发送的语言切换的通知
+         */
+        [[NSNotificationCenter defaultCenter] postNotificationName:YL_CHANGE_LANGUAGE object:nil userInfo:nil];
     }
     else if([[YLUtility getWhetherCustomLanguage] isEqualToString:@"YES"])
     {
         [self.segmentedControl setEnabled:YES];
-        NSString* customCurrentLanguage = [YLUtility getSysCurrentLanguage];
+        NSString* customCurrentLanguage = [YLUtility getCustomCurrentLanguage];
         if([customCurrentLanguage hasPrefix:@"en"])
         {
             [self.segmentedControl setSelectedSegmentIndex:0];
@@ -336,24 +357,49 @@
 -(void) segmentedControlChangValue:(UISegmentedControl*) sender
 {
     NSInteger senderId = sender.selectedSegmentIndex;
-    
+    NSString* languageType;
     switch (senderId) {
         case 0:
-            NSLog(@"英文");
+            languageType = @"en";
             break;
         case 1:
-            NSLog(@"简体中文");
+            languageType = @"zh-Hans";
             break;
         case 2:
-            NSLog(@"繁体中文");
+            languageType = @"zh-Hant";
             break;
         default:
+            languageType = @"en";
             break;
     }
-    
+    [YLUtility changeLanguageBundle:languageType];
+    /*
+     *存储当前的语言
+     */
+    [YLUtility setCuntomCurrentLanguage:languageType];
+    /*
+     *发送的语言切换的通知
+     */
+    [[NSNotificationCenter defaultCenter] postNotificationName:YL_CHANGE_LANGUAGE object:nil userInfo:nil];
 }
-
+-(void) changeLanguage:(id) sender
+{
+    [self setControlValueWithCustomLanguage];
+}
 #pragma mark -- 设置控件数据
+
+
+-(void) setControlValueWithCustomLanguage
+{
+    
+    self.label_title.text = NSLocalizedStringYL(@"Language-English",@"", @"YLRootViewController——label_title");
+    self.label_name.text = NSLocalizedStringYL(@"userName:",@"", @"YLRootViewController——label_name");
+    self.label_password.text = NSLocalizedStringYL(@"userPasw:", @"",@"YLRootViewController——label_password");
+    self.headImage.image = [UIImage imageNamed:NSLocalizedStringYL(@"English.png", @"",@"YLRootViewController-headImage")];
+    self.text_name.text = NSLocalizedStringYL(@"YouLing",@"", @"YLRootViewController-text_name");
+    self.text_password.text = NSLocalizedStringYL(@"123456",@"", @"LRootViewController-text_password");
+    self.label_swithch.text = NSLocalizedStringYL(@"WhetherCustomLanguage",@"", @"LRootViewController-label_swithch");
+}
 
 -(void) setControlValue
 {
@@ -365,6 +411,17 @@
     self.text_password.text = NSLocalizedString(@"123456", @"LRootViewController-text_password");
     self.label_swithch.text = NSLocalizedString(@"WhetherCustomLanguage", @"LRootViewController-label_swithch");
 }
+-(void) setControlValuetb1
+{
+    self.label_title.text = NSLocalizedStringFromTable(@"Language-English",@"YouLing" ,@"YLRootViewController——label_title");
+    self.label_name.text = NSLocalizedStringFromTable(@"userName:", @"YouLing" ,@"YLRootViewController——label_name");
+    self.label_password.text = NSLocalizedStringFromTable(@"userPasw:", @"YouLing" ,@"YLRootViewController——label_password");
+    self.headImage.image = [UIImage imageNamed:NSLocalizedStringFromTable(@"English.png", @"YouLing" ,@"YLRootViewController-headImage")];
+    self.text_name.text = NSLocalizedStringFromTable(@"YouLing",@"YouLing" , @"YLRootViewController-text_name");
+    self.text_password.text = NSLocalizedStringFromTable(@"123456", @"YouLing" ,@"LRootViewController-text_password");
+    self.label_swithch.text = NSLocalizedStringFromTable(@"WhetherCustomLanguage",@"YouLing" , @"LRootViewController-label_swithch");
+}
+
 -(void) viewDidLayoutSubviews
 {
     /*

@@ -1,27 +1,27 @@
 /* 
-  Localizable.strings
+  YouLing.strings
   YL_IOS_Internationalization
 
-  Created by YouLing on 2016/12/30.
-  Copyright © 2016年 YouLing. All rights reserved.
+  Created by YouLing on 2017/1/3.
+  Copyright © 2017年 YouLing. All rights reserved.
 */
 /* LRootViewController-text_password */
 "123456" = "123456";
 
 /* YLRootViewController-headImage */
-"English.png" = "fanti.jpg";
+"English.png" = "Chinese.png";
 
 /* YLRootViewController——label_title */
-"Language-English" = "語言-中文";
+"Language-English" = "语言-中文";
 
 /* YLRootViewController-text_name */
-"YouLing" = "幽靈";
+"YouLing" = "幽灵";
 
 /* YLRootViewController——label_name */
-"userName:" = "用戶姓：";
+"userName:" = "用户姓名：";
 
 /* YLRootViewController——label_password */
-"userPasw:" = "用戶密碼：";
+"userPasw:" = "用户密码：";
 
 /* LRootViewController-label_swithch */
-"WhetherCustomLanguage" = "是否支持自定義語言";
+"WhetherCustomLanguage" = "是否支持自定义语言";
